@@ -48,7 +48,7 @@
             <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->title }}" class="img-fluid" style="width:200px;" />
             <h2 class="blog-post-title mb-1">{{ $item->title }}</h2>
             <p class="blog-post-meta">{{ $item->created_at->diffForHumans() }} by {{ $item->author->name }} | <a href="{{ route('home', ['category' => $item->category->id]) }}&{{ http_build_query(request()->except('category', 'page')) }}">{{ $item->category->name }}</a></p>
-            <p>{{ $item->content }}</p>
+            <div>{!! $item->content !!}</div>
 
         </article>
         @endforeach

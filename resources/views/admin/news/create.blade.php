@@ -29,7 +29,7 @@
                     <div class="row mb-3">
                         <label for="content" class="col-sm-2 col-form-label">Content</label>
                         <div class="col-sm-10">
-                            <textarea name="content" id="content" style="height: 100px" class="form-control @error('content') is-invalid @enderror">{{ old('content') }}</textarea>
+                            <textarea name="content" id="content" class="form-control @error('content') is-invalid @enderror">{{ old('content') }}</textarea>
                             @error('content')
                             <div class="invalid-feedback">
                                 {{ $message }}

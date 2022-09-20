@@ -28,7 +28,7 @@
                             <tr>
                                 <th>{{ $item->id }}</th>
                                 <td>{{ $item->title }}</td>
-                                <td>{{ Str::words($item->content, 7) }}</td>
+                                <td>{!! Str::words($item->content, 7) !!}</td>
                                 <td>{{ $item->author->name }}</td>
                                 <td>
                                     <a href="{{ route('admin.news.index', ['category' => $item->category->id]) }}&{{ http_build_query(request()->except('category', 'page')) }}">

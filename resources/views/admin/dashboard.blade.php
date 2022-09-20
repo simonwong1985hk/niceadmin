@@ -20,7 +20,7 @@
             <div class="post-item clearfix">
               <img src="{{ asset('storage/' . $item->image) }}" alt="">
               <h4><a href="{{ route('admin.news.edit', $item->id) }}">{{ $item->title }}</a></h4>
-              <p>{{ Str::words($item->content, 40) }}</p>
+              <div style="font-size:14px; color:#777; margin-left:95px;">{!! Str::words($item->content, 40) !!}</div>
             </div>
             @endforeach
           </div><!-- End sidebar recent posts-->
